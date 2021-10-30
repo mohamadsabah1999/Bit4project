@@ -68,7 +68,7 @@ session_start();
     <div class="fadeIn first">
     </div>
 <form method="post">
-      <input type="text" id="login" class="fadeIn second" name="user_name" placeholder="login">
+      <input type="text" id="login" class="fadeIn second" name="user_name" placeholder="Email">
       <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
       <input id="button" type="submit" class="fadeIn fourth" value="Login"> <br>
 	  <input type="button" class="fadeIn fourth" onClick="location.href='Register.php'"value='Sign Up'>
