@@ -1,8 +1,8 @@
 <?php 
 session_start();
 
-	// include("connection.php");
-	// include("functions.php");
+	include("connection.php");
+	include("functions.php");
 
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -16,8 +16,8 @@ session_start();
 		{
 
 			//save to database
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+		
+			$query = "insert into table1 (user_name,password) values ('$user_name','$password')";
 
 			mysqli_query($con, $query);
 
