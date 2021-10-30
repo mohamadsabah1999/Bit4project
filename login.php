@@ -2,8 +2,8 @@
 
 session_start();
 
-	// include("connection.php");
-	// include("functions.php");
+	include("connection.php");
+	include("functions.php");
 
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -17,7 +17,7 @@ session_start();
 		{
 
 			//read from database
-			$query = "select * from users where user_name = '$user_name' AND password = '$password' limit 1";
+			$query = "select * from table1 where user_name = '$user_name' AND password = '$password' limit 1";
 			$result = mysqli_query($con, $query);
 
 			if($result)
@@ -31,7 +31,7 @@ session_start();
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: home.php");
+						header("Location: admin.php");
 						die;
 					}
 				}
