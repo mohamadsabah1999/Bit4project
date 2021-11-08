@@ -17,7 +17,7 @@ session_start();
 
 			//save to database
 		
-			$query = "insert into table1 (user_name,password) values ('$user_name','$password')";
+			$query = "insert into users (user_name,password) values ('$user_name','$password')";
 
 			mysqli_query($con, $query);
 
