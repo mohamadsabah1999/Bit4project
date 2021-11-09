@@ -25,7 +25,7 @@ echo "<script>alert('Data deleted');</script>";
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>Admin | Manage Users</title>
+    <title>Coach | Manage Users</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet">
@@ -39,7 +39,7 @@ echo "<script>alert('Data deleted');</script>";
               <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
-            <a href="#" class="logo"><b>Admin Dashboard</b></a>
+            <a href="#" class="logo"><b>Coach Dashboard</b></a>
             <div class="nav notify-row" id="top_menu">
                
                          
@@ -101,8 +101,7 @@ echo "<script>alert('Data deleted');</script>";
                               </tr>
                               </thead>
                               <tbody>
-                              <?php
-                               $ret=mysqli_query($con,"SELECT * FROM users");
+                              <?php $ret=mysqli_query($con,"select * from users");
 							  $cnt=1;
 							  while($row=mysqli_fetch_array($ret))
 							  {?>
@@ -111,8 +110,7 @@ echo "<script>alert('Data deleted');</script>";
                                   <td><?php echo $row['fname'];?></td>
                                   <td><?php echo $row['lname'];?></td>
                                   <td><?php echo $row['email'];?></td>
-                                  <td><?php echo $row['contactno'];?></td>
-                                <td><?php echo $row['posting_date'];?></td>
+                                  <td><?php echo $row['contactno'];?></td>  <td><?php echo $row['posting_date'];?></td>
                                   <td>
                                      
                                      <a href="update-profile.php?uid=<?php echo $row['id'];?>"> 

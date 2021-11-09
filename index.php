@@ -77,35 +77,114 @@ elseif(isset($_POST['coach']))
 
 // Code for login 
 
+if (!isset($_POST['coach_login'])) {
 
-if(isset($_POST['login']))
-{
-$password=$_POST['password'];
-$dec_password=$password;
-$useremail=$_POST['uemail'];
-$ret= mysqli_query($con,"SELECT * FROM users WHERE email='$useremail' and password='$dec_password'");
-$num=mysqli_fetch_array($ret);
-if($num>0)
-{
-$extra="welcome.php";
-$_SESSION['login']=$_POST['uemail'];
-$_SESSION['id']=$num['id'];
-$_SESSION['name']=$num['fname'];
-$host=$_SERVER['HTTP_HOST'];
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
+	if(isset($_POST['login']))
+	{
+	$password=$_POST['password'];
+	$dec_password=$password;
+	$useremail=$_POST['uemail'];
+	$ret= mysqli_query($con,"SELECT * FROM users WHERE email='$useremail' and password='$dec_password'");
+	$num=mysqli_fetch_array($ret);
+	if($num>0)
+	{
+	$extra="welcome.php";
+	$_SESSION['login']=$_POST['uemail'];
+	$_SESSION['id']=$num['id'];
+	$_SESSION['name']=$num['fname'];
+	$host=$_SERVER['HTTP_HOST'];
+	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	header("location:http://$host$uri/$extra");
+	exit();
+	}
+	else
+	{
+	echo "<script>alert('Invalid username or password');</script>";
+	$extra="index.php";
+	$host  = $_SERVER['HTTP_HOST'];
+	$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	//header("location:http://$host$uri/$extra");
+	exit();
+	}
+	}
+
+
+
+
+
+
+
+
+
+
+	
 }
-else
-{
-echo "<script>alert('Invalid username or password');</script>";
-$extra="index.php";
-$host  = $_SERVER['HTTP_HOST'];
-$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-//header("location:http://$host$uri/$extra");
-exit();
+
+elseif (isset($_POST['coach_login'])) {
+
+	if(isset($_POST['login']))
+	{
+	$password=$_POST['password'];
+	$dec_password=$password;
+	$useremail=$_POST['uemail'];
+	$ret= mysqli_query($con,"SELECT * FROM coach WHERE email='$useremail' and password='$dec_password'");
+	$num=mysqli_fetch_array($ret);
+	if($num>0)
+	{
+	$extra="./coach/manage-users.php";
+	$_SESSION['login']=$_POST['uemail'];
+	$_SESSION['id']=$num['id'];
+	$_SESSION['name']=$num['fname'];
+	$host=$_SERVER['HTTP_HOST'];
+	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	header("location:http://$host$uri/$extra");
+	exit();
+	}
+	else
+	{
+	echo "<script>alert('Invalid username or password');</script>";
+	$extra="index.php";
+	$host  = $_SERVER['HTTP_HOST'];
+	$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	//header("location:http://$host$uri/$extra");
+	exit();
+	}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
 }
-}
+
+
 
 //Code for Forgot Password
 
@@ -214,7 +293,7 @@ echo "<script>alert('Email not register with us');</script>";
 			                        </div>
 										
 									<div class="clear"> </div>
-								</div>
+					            </div>
 								<div><p style="display:contents;">coach ?</p></div><br>	
 								<label class="switch">
 									<input type="checkbox" name="coach">
@@ -254,8 +333,16 @@ echo "<script>alert('Email not register with us');</script>";
 
 									<input type="submit" name="login" value="LOG IN" >
 									</div>
+								
 				               </div>
+							   
 									<div class="clear"> </div>
+									<div><p style="display:contents;">coach ?</p></div><br>	
+								<label class="switch">
+									<input type="checkbox" name="coach_login">
+									<span class="slider round"></span>
+									
+									</label>
 								</div>
 
 							</form>
