@@ -337,7 +337,7 @@ echo "<script>alert('Email not register with us');</script>";
 				               </div>
 							   
 									<div class="clear"> </div>
-									<div><p style="display:contents;">coach ?</p></div><br>	
+									<div><p style="display:contents; color:#69e9cf;">coach ?</p></div><br>	
 								<label class="switch">
 									<input type="checkbox" name="coach_login">
 									<span class="slider round"></span>
