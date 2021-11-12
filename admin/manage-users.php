@@ -102,7 +102,7 @@ echo "<script>alert('Data deleted');</script>";
                               </thead>
                               <tbody>
                               <?php
-                               $ret=mysqli_query($con,"SELECT * FROM users");
+                               $ret=mysqli_query($con,"SELECT * FROM users , coach");
 							  $cnt=1;
 							  while($row=mysqli_fetch_array($ret))
 							  {?>

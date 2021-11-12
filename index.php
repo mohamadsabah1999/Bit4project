@@ -292,15 +292,7 @@ echo "<script>alert('Email not register with us');</script>";
 				                 </div>
 								<div class="sign-up">
 								<div class="fadeIn six">
-
-
-<div class="sendimg">   <tr>
-                    <td>
-                        Image:
-                        <input type="file" name="f1">
-                    </td>
-                </tr></div>
-<div></div>
+								
 
 								<input type="reset" value="Reset">
 								  </div>  
@@ -311,13 +303,21 @@ echo "<script>alert('Email not register with us');</script>";
 										
 									<div class="clear"> </div>
 					            </div>
-								<div><p style="display:contents;">coach ?</p></div><br>	
+								<div><p style="display:contents;">coach ?</p>
+								
+							
+							</div><br>	
 								<label class="switch">
 									<input type="checkbox" name="coach">
 									<span class="slider round"></span>
 									
 									</label>
+									<hr>
 									
+									<div class="clear"><div class="parent-div">
+								<button class="btn-upload">Choose image</button>
+								<input type="file" name="f1" />
+								</div></div>
 									
 									
 							</form>
