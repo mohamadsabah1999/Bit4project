@@ -12,13 +12,15 @@ if(!isset($_POST['coach']))
 		$password=$_POST['password'];
 		$contact=$_POST['contact'];
 		$enc_password=$password;
+	
+	
 	$sql=mysqli_query($con,"select id from users where email='$email'");
 	$row=mysqli_num_rows($sql);
 	if($row>0)
 	{
 		echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
 	} else{
-		$msg=mysqli_query($con,"insert into users(fname,lname,email,password,contactno) values('$fname','$lname','$email','$enc_password','$contact')");
+		$msg=mysqli_query($con,"insert into users(fname,lname,email,password,contactno,(image,gender) values('$fname','$lname','$email','$enc_password','$contact','$img','$g')");
 	
 	if($msg)
 	{
@@ -38,14 +40,20 @@ elseif(isset($_POST['coach']))
 			$email=$_POST['email'];
 			$password=$_POST['password'];
 			$contact=$_POST['contact'];
+			
 			$enc_password=$password;
+		
 		$sql=mysqli_query($con,"select id from coach where email='$email'");
 		$row=mysqli_num_rows($sql);
+		if($_FILES['f1']['name']){
+			move_uploaded_file($_FILES['f1']['tmp_name'], "coach/images/".$_FILES['f1']['name']);
+			$img="image/".$_FILES['f1']['name'];
+			}
 		if($row>0)
 		{
 			echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
 		} else{
-			$msg=mysqli_query($con,"insert into coach(fname,lname,email,password,contactno) values('$fname','$lname','$email','$enc_password','$contact')");
+			$msg=mysqli_query($con,"insert into coach(fname,lname,email,password,contactno,image) values('$fname','$lname','$email','$enc_password','$contact','$img')");
 		
 		if($msg)
 		{
@@ -284,6 +292,15 @@ echo "<script>alert('Email not register with us');</script>";
 				                 </div>
 								<div class="sign-up">
 								<div class="fadeIn six">
+
+
+<div class="sendimg">   <tr>
+                    <td>
+                        Image:
+                        <input type="file" name="f1">
+                    </td>
+                </tr></div>
+<div></div>
 
 								<input type="reset" value="Reset">
 								  </div>  

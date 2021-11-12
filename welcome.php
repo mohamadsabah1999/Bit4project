@@ -18,6 +18,7 @@ if (strlen($_SESSION['id']==0)) {
     <title>Welcome </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/heroic-features.css" rel="stylesheet">
+    
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

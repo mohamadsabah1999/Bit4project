@@ -989,3 +989,8 @@ form.sub input[type="password"] {
     .slider.round:before {
       border-radius: 50%;
     }
+    .sendimg{
+      color:#69e9cf;
+      margin-right:46% ;
+      padding: 3%;
+          }
