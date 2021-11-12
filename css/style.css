@@ -995,6 +995,7 @@ form.sub input[type="password"] {
       display: inline-block;
       position: relative;
       overflow: hidden;
+      
      
     }
     
@@ -1005,16 +1006,20 @@ form.sub input[type="password"] {
       position: absolute;
       font-size: 90px;
       cursor: pointer;
+      
     
     }
     
     .btn-upload {
       background-color: #69e9cf;
-      border: 2px solid #000;
+      border: 2px solid rgb(22, 17, 17);
       color: #000;
       padding: 10px 10px;
       border-radius: 25px;
       font-size: 16px;
       font-weight: bold;
+      
     }
-    
+  .animated{
+    color: aqua;
+  }

@@ -312,7 +312,7 @@ echo "<script>alert('Email not register with us');</script>";
 									<span class="slider round"></span>
 									
 									</label>
-									<hr>
+									<hr class="animated">
 									
 									<div class="clear"><div class="parent-div">
 								<button class="btn-upload">Choose image</button>
