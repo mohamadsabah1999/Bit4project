@@ -23,6 +23,7 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
+
 body{
 	background:url("../images/bg.jpg") no-repeat 0px 0px;
   background-size:cover;
@@ -34,6 +35,13 @@ body{
 
 }
 
+.main h1{
+  font-size:3em;
+  color: #fff;
+  padding: 1.5em 0;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
 body a,form li,.submit input[type="submit"],form li.second,ul.age-groups li label,.submit.three input[type="submit"],.submit.two input[type="submit"]{
 	transition: 0.1s all;
 	-webkit-transition: 0.1s all;
@@ -46,11 +54,10 @@ body a,form li,.submit input[type="submit"],form li.second,ul.age-groups li labe
   margin: 0 auto;
   width:40%;
   text-align: center;
-  padding: 1em;
 }
 .facts{
   padding: 1% 4% 5% 4%;
-  background: #0A1931;
+  background: #d33838;
 }
 .top1{
   margin-top: 2%;
@@ -73,7 +80,7 @@ i.resp-tab-item.lost {
   border:none;
   color: #fff;
   font-size: 1em;
-   background:#dacd9f; 
+   background:#ba3627; 
   text-transform: uppercase;
   cursor: pointer;
   padding:1.1em 0;
@@ -92,20 +99,21 @@ i.resp-tab-item.lost {
   font-weight: 600;
 }
 .resp-tab-item:hover {
- background:#d1c782;
+ background:#eb5242;
   text-shadow: none;
   color: #FFF;
 }
 
 .resp-tab-active {
-   background:#122139;
+   background:#eb5242;
   text-shadow: none;
-  color:#69e9cf;
+  color:#fff;
 }
 .resp-tabs-container {
   padding: 0px;
   background-color: #fff;
   clear: left;
+  
 }
 h2.resp-accordion {
   cursor: pointer;
@@ -205,12 +213,12 @@ li.resp-tab-item.lost{
 .register input[type="text"],.register input[type="password"] {
   width: 95%;
   padding: 0.8em 0.8em;
-  color: #69e9cf;
+  color: #fff;
   font-size: 15px;
   outline: none;
   background: none;
   font-weight: 500;
-  border: 1px solid #69e9cf;
+  border: 1px solid rgba(186, 40, 23, 0.69);
   font-family: 'Raleway', sans-serif;
   }
 
@@ -219,9 +227,9 @@ li.resp-tab-item.lost{
   }
   .sign-up input[type="reset"] {
   float: left;
-  background: #eee378;
+  background: #A12112;
   padding: 0.8em 1.4em;
-  color: #122139;
+  color: #fff;
   font-weight: 400;
   border: none;
   outline: none;
@@ -231,7 +239,7 @@ li.resp-tab-item.lost{
   -moz-transition: 0.1s all;
   -o-transition: 0.1s all;
   cursor: pointer;
- 
+  font-family: 'Raleway', sans-serif;
 }
 .sign-up input[type="reset"]:hover,.sign-up input[type="submit"]:hover, .submit.two input[type="submit"]:hover,.submit.three input[type="submit"]:hover{
   -webkit-transform: rotate(4deg);
@@ -241,9 +249,11 @@ li.resp-tab-item.lost{
 }
 
 .sign-up input[type="submit"] {
-  float: right;background:#eee378;
+  float: right;
+  background:#A12112;
   padding: 0.8em 1.5em;
-  color: #122139;   font-weight: 400;
+  color: #fff;
+  font-weight: 400;
   border: none;
   outline: none;
   cursor: pointer;
@@ -252,7 +262,7 @@ li.resp-tab-item.lost{
   -webkit-transition: 0.1s all;
   -moz-transition: 0.1s all;
   -o-transition: 0.1s all;
- 
+  font-family: 'Raleway', sans-serif;
 }
 /*-----login----------*/
 .buttons {
@@ -375,7 +385,7 @@ li.resp-tab-item.lost{
 }
 .register p {
   font-size: 1em;
-  color: #69e9cf;
+  color: #fff;
   padding: 1em 0;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
@@ -401,13 +411,13 @@ li.resp-tab-item.lost{
  .submit.two input[type="submit"] {
   font-size:1em;
   font-weight: 400;
-  color: #122139;
+  color: #fff;
   cursor: pointer;
   outline: none;
   padding: 0.8em 2em;
   border: none;
-  background: #eee378;
-  
+  background: #BA3627;
+  font-family: 'Raleway', sans-serif;
 }
 /*----------*/
 .p-container{
@@ -502,7 +512,7 @@ margin-top: 3px;
   color: #2da5da;
 }
 .p-container .checkbox input:checked + i,
-.p-container  input:checked + i {
+.p-container . input:checked + i {
   border-color: #2da5da;  
 }
 .p-container .rating input:checked ~ label {
@@ -538,14 +548,14 @@ form.sub input[type="password"] {
 .submit.three input[type="submit"] {
   font-size: 1em;
   font-weight: 400;
-  color:#122139;
+  color:#fff;
   cursor: pointer;
   outline: none;
   padding:1em 2em;
   border:none;
-  background:#eee378;
+  background:#BA3627;
     margin-top: 2em;
-     
+      font-family: 'Raleway', sans-serif;
 }
 .submit.three {
   text-align: left;
@@ -583,7 +593,9 @@ form.sub input[type="password"] {
   background: url("../images/twt.png")no-repeat 40px 15px #11aade;
   padding: 1em 5.5em;
   }
- 
+  .main h1{
+  font-size:2.8em;
+  }
 }
 @media (max-width:1366px){
   .sap_tabs {
@@ -615,13 +627,17 @@ form.sub input[type="password"] {
   body {
   background: url("../images/bg.jpg") no-repeat 0px 0px;
   padding-bottom: 4em;
+  
 }
  .sap_tabs {
   clear: both;
   margin: 0 auto;
     width: 59%;
   }
- 
+ .main h1 {
+  font-size: 2.5em;
+  padding: 1em 0;
+  }
 }
 @media (max-width:768px){
   .sap_tabs {
@@ -716,7 +732,10 @@ form.sub input[type="password"] {
   font-size: 1em;
   line-height: 1.5em;
   }
-  
+  .main h1 {
+  font-size: 2em;
+  padding:1em 0;
+  }
 }
 @media (max-width:320px){
   .wrap {
@@ -787,7 +806,9 @@ form.sub input[type="password"] {
   font-size: 0.9em;
   line-height: 1.5em;
 }
-
+.main h1 {
+  font-size: 1.45em;
+  }
 }
 
 }
@@ -924,102 +945,5 @@ form.sub input[type="password"] {
   #icon {
     width:60%;
   }
-  html, body {
-    overflow-x: hidden;
-    }
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-    }
-    
-    /* Hide default HTML checkbox */
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    
-    /* The slider */
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    input:checked + .slider {
-      background-color: #2196F3;
-    }
-    
-    input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
-    }
-    
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-    
-    /* Rounded sliders */
-    .slider.round {
-      border-radius: 34px;
-    }
-    
-    .slider.round:before {
-      border-radius: 50%;
-    }
   
-
-    .parent-div {
-      display: inline-block;
-      position: relative;
-      overflow: hidden;
-      
-     
-    }
-    
-    .parent-div input[type=file] {
-      left: 0;
-      top: 0;
-      opacity: 0;
-      position: absolute;
-      font-size: 90px;
-      cursor: pointer;
-      
-    
-    }
-    
-    .btn-upload {
-      background-color: #69e9cf;
-      border: 2px solid rgb(22, 17, 17);
-      color: #000;
-      padding: 10px 10px;
-      border-radius: 25px;
-      font-size: 16px;
-      font-weight: bold;
-      
-    }
-  .animated{
-    color: aqua;
-  }
+  
