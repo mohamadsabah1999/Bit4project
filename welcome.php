@@ -80,6 +80,7 @@ if(isset($_POST["submit2"]))
    {
    echo "<td>"; 
    echo '<img src="data:coach/images;base64,'.base64_encode($row['image'] ).'" height="200" width="200"/>';
+  
    echo "<br>";
    ?><a href="delete.php?id=<?php echo $row["id"]; ?>">Delete</a> <?php
    echo "</td>";
