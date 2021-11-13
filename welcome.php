@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 if (strlen($_SESSION['id']==0)) {
@@ -46,14 +47,6 @@ if (strlen($_SESSION['id']==0)) {
    
   </div>
 </nav>
-
-<form name="form1" action="" method="post" enctype="multipart/form-data">
-<table>
-<tr>
-<td><input type="submit" name="submit2" value="display"></td>
-</tr>
-</table>
-</form>
 <?php
 define('DB_SERVER','localhost');
 define('DB_USER','root');
@@ -67,29 +60,40 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
  }
 
-
-
-
-if(isset($_POST["submit2"]))
-{
-   $res=mysqli_query($con,"select * from coach");
-   echo "<table>";
-   echo "<tr>";
-   
-   while($row=mysqli_fetch_array($res))
-   {
-   echo "<td>"; 
-   echo '<img src="data:coach/images;base64,'.base64_encode($row['image'] ).'" height="200" width="200"/>';
-  
-   echo "<br>";
-   ?><a href="delete.php?id=<?php echo $row["id"]; ?>">Delete</a> <?php
-   echo "</td>";
-   } 
-   echo "</tr>";
-   
-   echo "</table>";
-  }
 ?>
+
+<table border="2">
+  <tr>
+    <td>Sr.No.</td>
+    <td>Name</td>
+    <td>Images</td>
+  </tr>
+
+<?php
+
+
+$records = mysqli_query($con,"select * from coach"); // fetch data from database
+
+while($data = mysqli_fetch_array($records))
+{
+?>
+  <tr>
+    <td><?php echo $data['id']; ?></td>
+    <td><?php echo $data['fname']; ?></td>
+    <td><img src="<?php echo $data['image']; ?>" width="100" height="100"></td>
+  </tr>	
+<?php
+}
+?>
+
+</table>
+
+<?php mysqli_close($con);  // close connection ?>
+
+
+
+
+
 
 </body>
 
