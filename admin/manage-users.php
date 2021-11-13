@@ -56,7 +56,11 @@ echo "<script>alert('Data deleted');</script>";
           <div id="sidebar"  class="nav-collapse ">
               <ul class="sidebar-menu" id="nav-accordion">
               
+<<<<<<< HEAD
               	  <p class="centered"><a href="#"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+=======
+              	  <p class="centered"><a href="#"><img src="assets/img/gym.png" class="img-circle" width="60"></a></p>
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
               	  <h5 class="centered"><?php echo $_SESSION['login'];?></h5>
               	  	
                   <li class="mt">
@@ -101,7 +105,12 @@ echo "<script>alert('Data deleted');</script>";
                               </tr>
                               </thead>
                               <tbody>
+<<<<<<< HEAD
                               <?php $ret=mysqli_query($con,"select * from users");
+=======
+                              <?php
+                               $ret=mysqli_query($con,"SELECT * FROM users , coach");
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 							  $cnt=1;
 							  while($row=mysqli_fetch_array($ret))
 							  {?>
@@ -110,7 +119,12 @@ echo "<script>alert('Data deleted');</script>";
                                   <td><?php echo $row['fname'];?></td>
                                   <td><?php echo $row['lname'];?></td>
                                   <td><?php echo $row['email'];?></td>
+<<<<<<< HEAD
                                   <td><?php echo $row['contactno'];?></td>  <td><?php echo $row['posting_date'];?></td>
+=======
+                                  <td><?php echo $row['contactno'];?></td>
+                                <td><?php echo $row['posting_date'];?></td>
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
                                   <td>
                                      
                                      <a href="update-profile.php?uid=<?php echo $row['id'];?>"> 

@@ -2,6 +2,7 @@
 require_once('connection.php');
 
 //Code for Registration 
+<<<<<<< HEAD
 if(isset($_POST['signup']))
 {
 	$fname=$_POST['fname'];
@@ -55,6 +56,200 @@ exit();
 }
 }
 
+=======
+if(!isset($_POST['coach']))
+{
+	if(isset($_POST['signup']))
+	{
+		$fname=$_POST['fname'];
+		$lname=$_POST['lname'];
+		$email=$_POST['email'];
+		$password=$_POST['password'];
+		$contact=$_POST['contact'];
+		$enc_password=$password;
+	
+	
+	$sql=mysqli_query($con,"select id from users where email='$email'");
+	$row=mysqli_num_rows($sql);
+	if($row>0)
+	{
+		echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
+	} else{
+		$msg=mysqli_query($con,"insert into users(fname,lname,email,password,contactno) values('$fname','$lname','$email','$enc_password','$contact')");
+	
+	if($msg)
+	{
+		echo "<script>alert('Register successfully');</script>";
+	}
+	}
+	}
+}
+elseif(isset($_POST['coach'])) 
+		
+	{
+
+		if(isset($_POST['signup']))
+		{
+			$fname=$_POST['fname'];
+			$lname=$_POST['lname'];
+			$email=$_POST['email'];
+			$password=$_POST['password'];
+			$contact=$_POST['contact'];
+			
+			$enc_password=$password;
+		
+		$sql=mysqli_query($con,"select id from coach where email='$email'");
+		$row=mysqli_num_rows($sql);
+		if($_FILES['f1']['name']){
+			move_uploaded_file($_FILES['f1']['tmp_name'], "coach/images/".$_FILES['f1']['name']);
+			$img="image/".$_FILES['f1']['name'];
+			}
+		if($row>0)
+		{
+			echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
+		} else{
+			$msg=mysqli_query($con,"insert into coach(fname,lname,email,password,contactno,image) values('$fname','$lname','$email','$enc_password','$contact','$img')");
+		
+		if($msg)
+		{
+			echo "<script>alert('Register successfully');</script>";
+		}
+		}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
+
+// Code for login 
+
+if (!isset($_POST['coach_login'])) {
+
+	if(isset($_POST['login']))
+	{
+	$password=$_POST['password'];
+	$dec_password=$password;
+	$useremail=$_POST['uemail'];
+	$ret= mysqli_query($con,"SELECT * FROM users WHERE email='$useremail' and password='$dec_password'");
+	$num=mysqli_fetch_array($ret);
+	if($num>0)
+	{
+	$extra="welcome.php";
+	$_SESSION['login']=$_POST['uemail'];
+	$_SESSION['id']=$num['id'];
+	$_SESSION['name']=$num['fname'];
+	$host=$_SERVER['HTTP_HOST'];
+	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	header("location:http://$host$uri/$extra");
+	exit();
+	}
+	else
+	{
+	echo "<script>alert('Invalid username or password');</script>";
+	$extra="index.php";
+	$host  = $_SERVER['HTTP_HOST'];
+	$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	//header("location:http://$host$uri/$extra");
+	exit();
+	}
+	}
+
+
+
+
+
+
+
+
+
+
+	
+}
+
+elseif (isset($_POST['coach_login'])) {
+
+	if(isset($_POST['login']))
+	{
+	$password=$_POST['password'];
+	$dec_password=$password;
+	$useremail=$_POST['uemail'];
+	$ret= mysqli_query($con,"SELECT * FROM coach WHERE email='$useremail' and password='$dec_password'");
+	$num=mysqli_fetch_array($ret);
+	if($num>0)
+	{
+	$extra="./coach/manage-users.php";
+	$_SESSION['login']=$_POST['uemail'];
+	$_SESSION['id']=$num['id'];
+	$_SESSION['name']=$num['fname'];
+	$host=$_SERVER['HTTP_HOST'];
+	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	header("location:http://$host$uri/$extra");
+	exit();
+	}
+	else
+	{
+	echo "<script>alert('Invalid username or password');</script>";
+	$extra="index.php";
+	$host  = $_SERVER['HTTP_HOST'];
+	$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	//header("location:http://$host$uri/$extra");
+	exit();
+	}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 //Code for Forgot Password
 
 if(isset($_POST['send']))
@@ -108,10 +303,19 @@ echo "<script>alert('Email not register with us');</script>";
     <!-- Tabs Titles -->
 
     <!-- Icon -->
+<<<<<<< HEAD
     <div class="fadeIn first">
     </div>
 <div class="main">
 		<h1>Registration or Login </h1>
+=======
+    <!-- <div class="fadeIn first">
+	</div> -->
+	
+	<div class="main">
+		
+		
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 	 <div class="sap_tabs">	
 			<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 			  <ul class="resp-tabs-list">
@@ -151,6 +355,10 @@ echo "<script>alert('Email not register with us');</script>";
 				                 </div>
 								<div class="sign-up">
 								<div class="fadeIn six">
+<<<<<<< HEAD
+=======
+								
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 
 								<input type="reset" value="Reset">
 								  </div>  
@@ -158,8 +366,31 @@ echo "<script>alert('Email not register with us');</script>";
 
 									<input type="submit" name="signup"  value="Sign Up" >
 			                        </div>
+<<<<<<< HEAD
 									<div class="clear"> </div>
 								</div>
+=======
+										
+									<div class="clear"> </div>
+					            </div>
+								<div><p style="display:contents;">coach ?</p>
+								
+							
+							</div><br>	
+								<label class="switch">
+									<input type="checkbox" name="coach">
+									<span class="slider round"></span>
+									
+									</label>
+									<hr class="animated">
+									
+									<div class="clear"><div class="parent-div">
+								<button class="btn-upload">Choose image</button>
+								<input type="file" name="f1" />
+								</div></div>
+									
+									
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 							</form>
 
 						</div>
@@ -190,8 +421,21 @@ echo "<script>alert('Email not register with us');</script>";
 
 									<input type="submit" name="login" value="LOG IN" >
 									</div>
+<<<<<<< HEAD
 				               </div>
 									<div class="clear"> </div>
+=======
+								
+				               </div>
+							   
+									<div class="clear"> </div>
+									<div><p style="display:contents; color:#69e9cf;">coach ?</p></div><br>	
+								<label class="switch">
+									<input type="checkbox" name="coach_login">
+									<span class="slider round"></span>
+									
+									</label>
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 								</div>
 
 							</form>
@@ -222,6 +466,11 @@ echo "<script>alert('Email not register with us');</script>";
 				     </div>	
 		        </div>
 	        </div>
+<<<<<<< HEAD
+=======
+		
+		
+>>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 	     </div>
 
 </body>
