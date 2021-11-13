@@ -80,7 +80,7 @@ while($data = mysqli_fetch_array($records))
   <tr>
     <td><?php echo $data['id']; ?></td>
     <td><?php echo $data['fname']; ?></td>
-    <td><img src="<?php echo $data['image']; ?>" width="100" height="100"></td>
+    <td><img src="<?php echo $data['image']; ?>" width="200" height="200"></td>
   </tr>	
 <?php
 }
