@@ -22,9 +22,7 @@ if (strlen($_SESSION['id']==0)) {
 
     <title>Welcome </title>
   
-    
-
-    
+ 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
@@ -39,6 +37,9 @@ if (strlen($_SESSION['id']==0)) {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><?php echo $_SESSION['name'];?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">proifle</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="logout.php">Logout</a>
@@ -80,7 +81,7 @@ while($data = mysqli_fetch_array($records))
   <tr>
     <td><?php echo $data['id']; ?></td>
     <td><?php echo $data['fname']; ?></td>
-    <td><img src="<?php echo $data['image']; ?>" width="200" height="200"></td>
+    <td> <?php echo '<img src="data:coach/images;base64,'.base64_encode($data['image'] ).'" height="200" width="200"/>';?></td>
   </tr>	
 <?php
 }
