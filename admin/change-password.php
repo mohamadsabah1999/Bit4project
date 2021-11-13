@@ -109,11 +109,7 @@ return true;
           <div id="sidebar"  class="nav-collapse ">
               <ul class="sidebar-menu" id="nav-accordion">
               
-<<<<<<< HEAD
-              	  <p class="centered"><a href="#"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-=======
               	  <p class="centered"><a href="#"><img src="assets/img/gym.png" class="img-circle" width="60"></a></p>
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
               	  <h5 class="centered"><?php echo $_SESSION['login'];?></h5>
               	  	
                   <li class="mt">

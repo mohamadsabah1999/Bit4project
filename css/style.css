@@ -23,10 +23,6 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
-<<<<<<< HEAD
-
-=======
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 body{
 	background:url("../images/bg.jpg") no-repeat 0px 0px;
   background-size:cover;
@@ -38,16 +34,6 @@ body{
 
 }
 
-<<<<<<< HEAD
-.main h1{
-  font-size:3em;
-  color: #fff;
-  padding: 1.5em 0;
-  text-align: center;
-  font-family: 'Lora', serif;
-}
-=======
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 body a,form li,.submit input[type="submit"],form li.second,ul.age-groups li label,.submit.three input[type="submit"],.submit.two input[type="submit"]{
 	transition: 0.1s all;
 	-webkit-transition: 0.1s all;
@@ -60,18 +46,11 @@ body a,form li,.submit input[type="submit"],form li.second,ul.age-groups li labe
   margin: 0 auto;
   width:40%;
   text-align: center;
-<<<<<<< HEAD
-}
-.facts{
-  padding: 1% 4% 5% 4%;
-  background: #d33838;
-=======
   padding: 1em;
 }
 .facts{
   padding: 1% 4% 5% 4%;
   background: #0A1931;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 .top1{
   margin-top: 2%;
@@ -94,11 +73,7 @@ i.resp-tab-item.lost {
   border:none;
   color: #fff;
   font-size: 1em;
-<<<<<<< HEAD
-   background:#ba3627; 
-=======
    background:#dacd9f; 
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   text-transform: uppercase;
   cursor: pointer;
   padding:1.1em 0;
@@ -117,34 +92,20 @@ i.resp-tab-item.lost {
   font-weight: 600;
 }
 .resp-tab-item:hover {
-<<<<<<< HEAD
- background:#eb5242;
-=======
  background:#d1c782;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   text-shadow: none;
   color: #FFF;
 }
 
 .resp-tab-active {
-<<<<<<< HEAD
-   background:#eb5242;
-  text-shadow: none;
-  color:#fff;
-=======
    background:#122139;
   text-shadow: none;
   color:#69e9cf;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 .resp-tabs-container {
   padding: 0px;
   background-color: #fff;
   clear: left;
-<<<<<<< HEAD
-  
-=======
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 h2.resp-accordion {
   cursor: pointer;
@@ -244,20 +205,12 @@ li.resp-tab-item.lost{
 .register input[type="text"],.register input[type="password"] {
   width: 95%;
   padding: 0.8em 0.8em;
-<<<<<<< HEAD
-  color: #fff;
-=======
   color: #69e9cf;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   font-size: 15px;
   outline: none;
   background: none;
   font-weight: 500;
-<<<<<<< HEAD
-  border: 1px solid rgba(186, 40, 23, 0.69);
-=======
   border: 1px solid #69e9cf;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   font-family: 'Raleway', sans-serif;
   }
 
@@ -266,15 +219,9 @@ li.resp-tab-item.lost{
   }
   .sign-up input[type="reset"] {
   float: left;
-<<<<<<< HEAD
-  background: #A12112;
-  padding: 0.8em 1.4em;
-  color: #fff;
-=======
   background: #eee378;
   padding: 0.8em 1.4em;
   color: #122139;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   font-weight: 400;
   border: none;
   outline: none;
@@ -284,11 +231,7 @@ li.resp-tab-item.lost{
   -moz-transition: 0.1s all;
   -o-transition: 0.1s all;
   cursor: pointer;
-<<<<<<< HEAD
-  font-family: 'Raleway', sans-serif;
-=======
  
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 .sign-up input[type="reset"]:hover,.sign-up input[type="submit"]:hover, .submit.two input[type="submit"]:hover,.submit.three input[type="submit"]:hover{
   -webkit-transform: rotate(4deg);
@@ -298,17 +241,9 @@ li.resp-tab-item.lost{
 }
 
 .sign-up input[type="submit"] {
-<<<<<<< HEAD
-  float: right;
-  background:#A12112;
-  padding: 0.8em 1.5em;
-  color: #fff;
-  font-weight: 400;
-=======
   float: right;background:#eee378;
   padding: 0.8em 1.5em;
   color: #122139;   font-weight: 400;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   border: none;
   outline: none;
   cursor: pointer;
@@ -317,11 +252,7 @@ li.resp-tab-item.lost{
   -webkit-transition: 0.1s all;
   -moz-transition: 0.1s all;
   -o-transition: 0.1s all;
-<<<<<<< HEAD
-  font-family: 'Raleway', sans-serif;
-=======
  
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 /*-----login----------*/
 .buttons {
@@ -444,11 +375,7 @@ li.resp-tab-item.lost{
 }
 .register p {
   font-size: 1em;
-<<<<<<< HEAD
-  color: #fff;
-=======
   color: #69e9cf;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   padding: 1em 0;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
@@ -474,22 +401,13 @@ li.resp-tab-item.lost{
  .submit.two input[type="submit"] {
   font-size:1em;
   font-weight: 400;
-<<<<<<< HEAD
-  color: #fff;
-=======
   color: #122139;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   cursor: pointer;
   outline: none;
   padding: 0.8em 2em;
   border: none;
-<<<<<<< HEAD
-  background: #BA3627;
-  font-family: 'Raleway', sans-serif;
-=======
   background: #eee378;
   
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 /*----------*/
 .p-container{
@@ -584,11 +502,7 @@ margin-top: 3px;
   color: #2da5da;
 }
 .p-container .checkbox input:checked + i,
-<<<<<<< HEAD
-.p-container . input:checked + i {
-=======
 .p-container  input:checked + i {
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   border-color: #2da5da;  
 }
 .p-container .rating input:checked ~ label {
@@ -624,24 +538,14 @@ form.sub input[type="password"] {
 .submit.three input[type="submit"] {
   font-size: 1em;
   font-weight: 400;
-<<<<<<< HEAD
-  color:#fff;
-=======
   color:#122139;
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
   cursor: pointer;
   outline: none;
   padding:1em 2em;
   border:none;
-<<<<<<< HEAD
-  background:#BA3627;
-    margin-top: 2em;
-      font-family: 'Raleway', sans-serif;
-=======
   background:#eee378;
     margin-top: 2em;
      
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 .submit.three {
   text-align: left;
@@ -679,13 +583,7 @@ form.sub input[type="password"] {
   background: url("../images/twt.png")no-repeat 40px 15px #11aade;
   padding: 1em 5.5em;
   }
-<<<<<<< HEAD
-  .main h1{
-  font-size:2.8em;
-  }
-=======
  
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 @media (max-width:1366px){
   .sap_tabs {
@@ -717,24 +615,13 @@ form.sub input[type="password"] {
   body {
   background: url("../images/bg.jpg") no-repeat 0px 0px;
   padding-bottom: 4em;
-<<<<<<< HEAD
-  
-=======
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
  .sap_tabs {
   clear: both;
   margin: 0 auto;
     width: 59%;
   }
-<<<<<<< HEAD
- .main h1 {
-  font-size: 2.5em;
-  padding: 1em 0;
-  }
-=======
  
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 @media (max-width:768px){
   .sap_tabs {
@@ -829,14 +716,7 @@ form.sub input[type="password"] {
   font-size: 1em;
   line-height: 1.5em;
   }
-<<<<<<< HEAD
-  .main h1 {
-  font-size: 2em;
-  padding:1em 0;
-  }
-=======
   
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 @media (max-width:320px){
   .wrap {
@@ -907,13 +787,7 @@ form.sub input[type="password"] {
   font-size: 0.9em;
   line-height: 1.5em;
 }
-<<<<<<< HEAD
-.main h1 {
-  font-size: 1.45em;
-  }
-=======
 
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
 }
 
 }
@@ -1050,13 +924,6 @@ form.sub input[type="password"] {
   #icon {
     width:60%;
   }
-<<<<<<< HEAD
-  .fixed{
-    resize: both;
-    overflow: auto;
-  }
-  
-=======
   html, body {
     overflow-x: hidden;
     }
@@ -1156,4 +1023,3 @@ form.sub input[type="password"] {
   .animated{
     color: aqua;
   }
->>>>>>> f0df4403ad48d3658cc63a94b939cfdc8d4b6e0c
