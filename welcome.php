@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 if (strlen($_SESSION['id']==0)) {
@@ -39,7 +38,7 @@ if (strlen($_SESSION['id']==0)) {
         <a class="nav-link" href="#"><?php echo $_SESSION['name'];?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">proifle</a>
+        <a class="nav-link" href="changepass.php">proifle</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="logout.php">Logout</a>
