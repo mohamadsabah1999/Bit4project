@@ -1,8 +1,5 @@
 <?php 
 session_start();
-
-if (isset($_SESSION['id']) && isset($_SESSION['name'])) {
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -11,70 +8,50 @@ if (isset($_SESSION['id']) && isset($_SESSION['name'])) {
 	<link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body>
-    <form action="change-p.php" method="post">
+    <form action="" method="post">
      	<h2>Change Password</h2>
-     	<?php if (isset($_GET['error'])) { ?>
-     		<p class="error"><?php echo $_GET['error']; ?></p>
-     	<?php } ?>
 
-     	<?php if (isset($_GET['success'])) { ?>
-            <p class="success"><?php echo $_GET['success']; ?></p>
-        <?php } ?>
-
-     	<label>Old Password</label>
+     	<label>name</label>
+     	<input type="text" 
+     	       name="fname" 
+     	       placeholder="name" require>
+     	       <br>
+     	<label>Password</label>
      	<input type="password" 
-     	       name="op" 
-     	       placeholder="Old Password">
+     	       name="password" 
+     	       placeholder="Password" require>
      	       <br>
 
-     	<label>New Password</label>
-     	<input type="password" 
-     	       name="np" 
-     	       placeholder="New Password">
-     	       <br>
-
-     	<label>Confirm New Password</label>
-     	<input type="password" 
-     	       name="c_np" 
-     	       placeholder="Confirm New Password">
-     	       <br>
-
-
-
-
-
-				<label>Old Email</label>
+				<label>Email</label>
      	<input type="email" 
-     	       name="oe" 
-     	       placeholder="Old email">
-     	       <br>
-
-     	<label>New Email</label>
-     	<input type="email" 
-     	       name="ne" 
-     	       placeholder="New email">
-     	       <br>
-
-     	<label>Confirm New Email</label>
-     	<input type="email" 
-     	       name="c_ne" 
-     	       placeholder="Confirm New email">
+     	       name="email" 
+     	       placeholder="email" require>
      	       <br>
 
 
 
-
-
-
-     	<button type="submit">CHANGE</button>
+     	<button name="update" type="submit">CHANGE</button>
           <a href="welcome.php" class="ca">HOME</a>
      </form>
 </body>
 </html>
 
-<?php 
-}else{
-     header("Location: welcome.php");
-     exit();
+<?php   include "connection.php";
+$db=mysqli_select_db($con,'loginsystem');
+if (isset($_POST['update'])) {
+$id = $_SESSION['id'];
+$query="UPDATE `users` SET fname='$_POST[fname]',password='$_POST[password]',email='$_POST[email]' WHERE id='$id'";
+
+$query_run=mysqli_query($con,$query);
+if ($query_run) {
+	echo'<script type="text/javascript">alert("data updated successfuly")</script>';
 }
- ?>
+else{
+	echo'<script type="text/javascript">alert("data updated failed")	</script>';
+
+}
+
+}
+
+
+?>
