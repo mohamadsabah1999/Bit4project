@@ -9,6 +9,12 @@ if (strlen($_SESSION['id']==0)) {
 
 <head>
 
+
+<style type="text/css">
+  .ex{color: white;
+  margin-bottom: -1px;
+  padding: 10px;}
+</style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +48,12 @@ if (strlen($_SESSION['id']==0)) {
       </li>
       <li class="nav-item">
       <a class="nav-link" href="logout.php">Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
       </li>
     </ul>
    
@@ -91,6 +103,37 @@ while($data = mysqli_fetch_array($records))
 <?php mysqli_close($con);  // close connection ?>
 
 
+
+
+
+
+
+
+
+<div style="    overflow: hidden;">
+<div style="background-color:black;"  class="ex">
+
+<h2 >Contact Us</h2>
+
+<h5 style="padding:19px ;"><center>"Send a message when you need help."</center></h5>
+
+
+
+<div style="padding-left: 70px;">
+  <div class="row">
+  <div class="col">
+    <h4><i class="fas fa-phone-volume">Phone namber:</i></h4>
+<h5>07807030280</h5>
+<h5>07516697518</h5>
+    </div>
+    <div class="col">
+    <h4>E-mail:</h4>
+<h5>yousif.abdulrahman.alum@uoitc.edu.iq</h5>
+<h5>mohammed1.sabah.alum@uoitc.edu.iq</h5>
+    </div>
+  </div>
+</div>
+</div>
 
 
 

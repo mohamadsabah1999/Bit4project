@@ -14,7 +14,7 @@ session_start();
      	<label>name</label>
      	<input type="text" 
      	       name="fname" 
-     	       placeholder="name" require>
+     	       placeholder="name" requir="enter name">
      	       <br>
      	<label>Password</label>
      	<input type="password" 
@@ -25,7 +25,7 @@ session_start();
 				<label>Email</label>
      	<input type="email" 
      	       name="email" 
-     	       placeholder="email" require>
+     	       placeholder="email" requir="enter name">
      	       <br>
 
 
